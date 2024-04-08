@@ -1,0 +1,25 @@
+
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="referral_code">Referral Code (Optional):</label><br>
+        <input type="text" id="referral_code" name="referral_code"><br>
+        <input type="submit" value="Register">
+    </form>
+    <a href="{% url 'user_details' %}">View User Details</a>
+</body>
+</html>

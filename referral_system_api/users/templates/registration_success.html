@@ -1,0 +1,20 @@
+<!-- register_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Success</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Your form fields here -->
+    
+    <h2>Registration Successful!</h2>
+    <p>Your account has been successfully registered.</p>
+    <p>Your User ID is: {{ user_id }}</p>
+
+    <a href="{% url 'user_details' %}">View User Details</a>
+        </form>
+</body>
+</html>

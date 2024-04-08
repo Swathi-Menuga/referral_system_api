@@ -1,0 +1,19 @@
+<!-- details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+</head>
+<body>
+    
+    <h1>User Details</h1>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Referral Code:</strong> {{ referral_code }}</p>
+    <p><strong>Registration Timestamp:</strong> {{ registration_timestamp }}</p>
+
+    <a href="{% url 'referrals_endpoint' %}">View Referrals</a>
+    
+</body>
+</html>

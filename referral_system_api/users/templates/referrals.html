@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Referrals</title>
+</head>
+<body>
+    <h1>Referrals</h1>
+    
+    <ul>
+        {% for referral in referrals %}
+        <li>
+            <strong>User ID:</strong> {{ referral.user_id }}<br>
+            <strong>Name:</strong> {{ referral.name }}<br>
+            <strong>Email:</strong> {{ referral.email }}<br>
+            <strong>Registration Timestamp:</strong> {{ referral.registration_timestamp }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    {% if referrals.has_next %}
+    <a href="?page={{ referrals.next_page_number }}">Next Page</a>
+    {% endif %}
+</body>
+</html>
